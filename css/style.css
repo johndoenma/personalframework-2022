@@ -115,14 +115,14 @@ hr {
 /* BUTTONS */
 .button {
   display: inline-block;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(61, 90, 255);
   color: #fff;
   text-decoration: none;
   padding: 1em;
   border-radius: 5px;
 }
 .button:hover {
-  background-color: rgb(102, 0, 0);
+  background-color: rgb(19, 41, 165);
 }
 
 /* RESPONSIVE IMAGES */
@@ -256,7 +256,8 @@ body {
 
 /* SITE STRUCTURE */
 .site-header {
-  background: rgb(102, 0, 0);
+  position: absolute;
+  width: 100%;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,7 +280,7 @@ body {
 
 /* SITE FOOTER */
 .site-footer {
-  background: rgb(102, 0, 0);
+  background: rgb(10, 6, 90);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,12 +315,21 @@ section {
 
 /* HERO SECTION */
 .hero {
-  background-color: rgb(255, 202, 202);
+  background-color: rgb(10, 6, 90);
   text-align: center;
-  padding: 6em 0;
+  padding: 8em 0 4em 0;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .hero h1 {
   margin-bottom: 0.25em;
+  color: rgb(255, 255, 255);
 }
 .hero p {
   margin: 1em auto;
