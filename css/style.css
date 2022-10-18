@@ -362,7 +362,7 @@ section {
 }
 
 .site-header .site-nav ul {
-  background: pink;
+  background: red;
   position: fixed;
   top: 0;
   right: 0;
@@ -387,8 +387,8 @@ section {
   transition: all 0.3s ease-out;
 }
 .site-header .site-nav[data-navstate=closed] ul {
-  -webkit-transform: translate(100%, -100%);
-          transform: translate(100%, -100%);
+  -webkit-transform: translate(100%, 0%);
+          transform: translate(100%, 0%);
 }
 .site-header .site-nav .menu-button {
   background-color: transparent;
@@ -403,4 +403,20 @@ section {
 }
 .site-header .site-nav .menu-button svg rect {
   fill: white;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.site-header .site-nav[data-navstate=open] .menu-button svg #menubar-top {
+  -webkit-transform: translate(-5px, 9px) rotate(30deg);
+          transform: translate(-5px, 9px) rotate(30deg);
+}
+.site-header .site-nav[data-navstate=open] .menu-button svg #menubar-mid {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+}
+.site-header .site-nav[data-navstate=open] .menu-button svg #menubar-bot {
+  -webkit-transform: translate(-5px, -9px) rotate(-30deg);
+          transform: translate(-5px, -9px) rotate(-30deg);
 }

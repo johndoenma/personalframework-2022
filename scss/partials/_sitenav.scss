@@ -21,7 +21,7 @@
     .site-nav {
  
         ul {
-            background: pink;
+            background: red;
             position: fixed;
             top: 0;
             right: 0;
@@ -37,7 +37,7 @@
 
         &[data-navstate="closed"] {
             ul {
-                transform: translate(100%,-100%);
+                transform: translate(100%,0%);
             }
         }
 
@@ -51,11 +51,28 @@
 
             svg {
                 display: block;
-                // background: teal;
 
                 rect {
                     fill: white;
+                    transform-origin: center;
+                    transition: all .3s ease-out;
                 }
+            }
+
+        }
+
+        &[data-navstate="open"] .menu-button svg {
+
+            #menubar-top {
+                transform: translate(-5px,9px) rotate(30deg);
+            }
+            
+            #menubar-mid {
+                transform: scale(0,1);
+            }
+
+            #menubar-bot {
+                transform: translate(-5px,-9px) rotate(-30deg);
             }
 
         }
