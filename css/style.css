@@ -392,9 +392,15 @@ section {
 }
 .site-header .site-nav .menu-button {
   background-color: transparent;
-  border: 1px solid white;
+  border: none;
   color: white;
-  padding: 0.5em 1em;
+  padding: 0.7em;
   position: relative;
   z-index: 20;
+}
+.site-header .site-nav .menu-button svg {
+  display: block;
+}
+.site-header .site-nav .menu-button svg rect {
+  fill: white;
 }

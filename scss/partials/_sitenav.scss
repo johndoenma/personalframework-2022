@@ -43,11 +43,21 @@
 
         .menu-button {
             background-color: transparent;
-            border: 1px solid white;
+            border: none;
             color: white;
-            padding: .5em 1em;
+            padding: .7em;
             position: relative;
             z-index: 20;
+
+            svg {
+                display: block;
+                // background: teal;
+
+                rect {
+                    fill: white;
+                }
+            }
+
         }
         
     }
