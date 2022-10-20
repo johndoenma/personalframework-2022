@@ -315,7 +315,7 @@ body {
 
 section {
   padding: 4em 0;
-  min-height: 100vh;
+  min-height: 101vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +329,7 @@ section {
   background-color: rgb(10, 6, 90);
   text-align: center;
   padding: 8em 0 4em 0;
-  min-height: 100vh;
+  min-height: 101vh;
   color: rgba(255, 255, 255, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,4 +614,15 @@ section {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
+}
+
+/* CSS ANIMATIONS */
+section[data-sectionstate=active] {
+  opacity: 1;
+  -webkit-transition: all 0.4s linear 0.5s;
+  transition: all 0.4s linear 0.5s;
+}
+
+section[data-sectionstate=inactive] {
+  opacity: 0;
 }
