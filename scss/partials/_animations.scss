@@ -2,30 +2,84 @@
 
 /* ANIMATE SECTION 1 ON SCROLL */
 #section1.scroll-triggered[data-sectionstate="inactive"] {
-
     .jd-contentblock-image {
         transform: translateX(-200px);
         opacity: 0;
     }
-
     .jd-contentblock-text {
         transform: translateX(200px);
         opacity: 0;
     }
-
 }
 
 #section1.scroll-triggered[data-sectionstate="active"] {
-
     .jd-contentblock-image {
         opacity: 1;
         transform: translateX(0px);
-        transition: all 1s ease-out;
+        transition: all 1s ease-out .5s;
     }
-
     .jd-contentblock-text {
         opacity: 1;
         transform: translateX(0px);
+        transition: all 1s ease-out .5s;
+    }
+}
+
+/* ANIMATE SECTION 2 ON SCROLL */
+#section2.scroll-triggered[data-sectionstate="inactive"] {
+
+    background-color: #888;
+
+    .jd-contentblock-image {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    .jd-contentblock-text {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+#section2.scroll-triggered[data-sectionstate="active"] {
+
+    background-color: #eee;
+    transition: all 1s ease-out;
+
+    .jd-contentblock-image {
+        opacity: 1;
+        transform: translateY(0px);
         transition: all 1s ease-out;
+    }
+    .jd-contentblock-text {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: all 1s ease-out;
+    }
+}
+
+/* ANIMATE SECTION 3 ON SCROLL */
+
+#section3 .jd-contentblock-image {
+    position: relative;
+    margin-top: 4em;
+}
+#section3 .jd-character {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+#section3.scroll-triggered[data-sectionstate="inactive"] {
+    .jd-character {
+        transform: translate(-50%, 50%);
+    }
+}
+
+#section3.scroll-triggered[data-sectionstate="active"] {
+    .jd-character {
+        transform: translate(-50%, -50%);
+        transition: all 1s ease-out .5s;
     }
 }
