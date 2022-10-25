@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   
-    document.querySelectorAll("section").forEach((section) => {
-        myobserver.observe(section);
+    document.querySelectorAll(".scroll-triggered").forEach((el) => {
+        myobserver.observe(el);
     });
     
 });
