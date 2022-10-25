@@ -389,6 +389,7 @@ section {
           transform: translate(0, 0);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 100;
 }
 .site-header .site-nav[data-navstate=closed] ul {
   -webkit-transform: translate(100%, 0%);
@@ -450,7 +451,7 @@ section {
   color: white;
   padding: 0.7em;
   position: relative;
-  z-index: 20;
+  z-index: 200;
 }
 .site-header .site-nav .menu-button svg {
   display: block;
@@ -621,6 +622,76 @@ section {
 }
 
 /* CSS ANIMATIONS */
+/* ANIMATE THE HERO ON LOAD */
+.hero h1 {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero p {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .button-group a {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .button-group a:nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.hero .button-group a:nth-child(2) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.hero .button-group a:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+@-webkit-keyframes jd-scaleup {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes jd-scaleup {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
 /* ANIMATE SECTION 1 ON SCROLL */
 #section1.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
   -webkit-transform: translateX(-200px);

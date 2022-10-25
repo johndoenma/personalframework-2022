@@ -33,6 +33,7 @@
             justify-content: center;
             transform: translate(0,0);
             transition: all .3s ease-out;
+            z-index: 100;
         }
 
         &[data-navstate="closed"] {
@@ -74,7 +75,7 @@
             color: white;
             padding: .7em;
             position: relative;
-            z-index: 20;
+            z-index: 200;
 
             svg {
                 display: block;
