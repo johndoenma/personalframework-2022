@@ -436,6 +436,11 @@ section {
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
 }
+.site-header .site-nav[data-navstate=open] .menu-button {
+  position: fixed;
+  top: 1.5em;
+  right: 1.7em;
+}
 .site-header .site-nav[data-navstate=open] li {
   opacity: 1;
   -webkit-transform: translate(0, 0);
@@ -450,7 +455,6 @@ section {
   border: none;
   color: white;
   padding: 0.7em;
-  position: relative;
   z-index: 200;
 }
 .site-header .site-nav .menu-button svg {
