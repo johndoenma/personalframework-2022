@@ -438,8 +438,8 @@ section {
 }
 .site-header .site-nav[data-navstate=open] .menu-button {
   position: fixed;
-  top: 1.5em;
-  right: 1.7em;
+  top: 1.9em;
+  right: 1.5em;
 }
 .site-header .site-nav[data-navstate=open] li {
   opacity: 1;
